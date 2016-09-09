@@ -1,0 +1,5 @@
+ruby-smart-proxy-dhcp-infoblox (0.0.3-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #nnnn)
+
+ -- root <root@debian.my.lan>  Thu, 01 Sep 2016 14:21:48 +0000
