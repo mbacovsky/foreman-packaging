@@ -32,6 +32,7 @@ Source15:   backup.rb
 Source16:   hostname-change.rb
 Source17:   helper.rb
 Source18:   katello-backup-rotate-tar.sh
+Source19:   db_config.rb
 
 BuildRequires: asciidoc
 BuildRequires: util-linux
@@ -101,6 +102,7 @@ install -m 644 %{SOURCE15} %{buildroot}%{_datarootdir}/katello/backup.rb
 install -m 644 %{SOURCE16} %{buildroot}%{_datarootdir}/katello/hostname-change.rb
 install -m 644 %{SOURCE17} %{buildroot}%{_datarootdir}/katello/helper.rb
 install -m 755 %{SOURCE18} %{buildroot}%{_datarootdir}/katello/katello-backup-rotate-tar.sh
+install -m 644 %{SOURCE19} %{buildroot}%{_datarootdir}/katello/db_config.rb
 
 # install important scripts
 mkdir -p %{buildroot}%{_bindir}
@@ -156,6 +158,7 @@ Common runtime components of %{name}
 %{_datarootdir}/katello/hostname-change.rb
 %{_datarootdir}/katello/helper.rb
 %{_datarootdir}/katello/katello-backup-rotate-tar.sh
+%{_datarootdir}/katello/db_config.rb
 %config(missingok) %{_sysconfdir}/cron.weekly/katello-clean-empty-puppet-environments
 %config(missingok) %{_sysconfdir}/cron.weekly/katello-remove-orphans
 %config(missingok) %{_sysconfdir}/cron.daily/katello-repository-publish-check

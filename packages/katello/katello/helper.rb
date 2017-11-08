@@ -1,5 +1,9 @@
+require 'pathname'
+require_relative 'db_config'
+
 module KatelloUtilities
   module Helper
+
     def last_scenario
       if File.exist?(last_scenario_yaml)
         File.basename(File.readlink(last_scenario_yaml)).split(".")[0]
@@ -113,6 +117,10 @@ module KatelloUtilities
       def colorize(color_code)
         "\e[#{color_code}m#{self}\e[0m"
       end
+    end
+
+    def db_config
+      @katello_db_config ||= KatelloUtilities::DBConfig.new(last_scenario_yaml)
     end
   end
 end
